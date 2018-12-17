@@ -4,7 +4,6 @@
  * Visit http://adobexdplatform.com/ for API docs and more sample code.
  */
 
-const { Rectangle, Color } = require("scenegraph");
 const cloud = require("cloud");
 const xdPluginToolkit = require("./lib/dialogs.js");
 
@@ -13,9 +12,9 @@ async function myPluginCommand(selection) {
   console.log("Plugin command is running!");
 
   const sharedArtifacts = cloud.getSharedArtifacts();
-  console.log(sharedArtifacts);
 
-  const msgData = [];
+  const errorMsg = "You'll need to share a prototype or design spec first.";
+  let msgData = [];
 
   sharedArtifacts.map(artifact => {
     msgData.push(`# Name: ${artifact.name}`);
@@ -24,13 +23,11 @@ async function myPluginCommand(selection) {
     msgData.push(`[View on the web](${artifact.url})`);
   });
 
-  console.log(msgData);
-
-  let dialogContent = {
+  const dialogContent = {
     title: "Shared Artifacts",
     icon: "plugin-icon",
-    msgs: msgData,
-    isError: false,
+    msgs: msgData.length ? msgData : errorMsg,
+    isError: !msgData.length,
     width: 600,
     height: "auto",
     iconSize: 18
