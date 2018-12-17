@@ -15,7 +15,7 @@
   ],
   "uiEntryPoints": [
     {
-      "label": "Cloud Shared Artifacts",
+      "label": "See Cloud Shared Artifacts...",
       "type": "menu",
       "commandId": "myPluginCommand"
     }
