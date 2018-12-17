@@ -1,0 +1,24 @@
+{
+  "name": "Demo Cloud Shared Artifacts",
+  "host": {
+    "app": "XD",
+    "minVersion": "14.0.0"
+  },
+  "description": "Sample plugin for Adobe XD, providing starter project scaffolding.",
+  "id": "YOUR_PLUGIN_ID_HERE",
+  "icons": [
+    {
+      "path": "images/icon.png",
+      "width": 96,
+      "height": 96
+    }
+  ],
+  "uiEntryPoints": [
+    {
+      "label": "Cloud Shared Artifacts",
+      "type": "menu",
+      "commandId": "myPluginCommand"
+    }
+  ],
+  "version": "1.0.0"
+}
