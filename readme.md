@@ -6,6 +6,8 @@ The plugin also makes use of the [plugin toolkit](https://github.com/AdobeXD/plu
 
 ## Usage
 
+_Note: XD 14+ is required to install this plugin._
+
 First, [package and install](https://adobexdplatform.com/plugin-docs/distribution/packaging.html) the plugin.
 
 Once installed, to run the plugin, go to:
